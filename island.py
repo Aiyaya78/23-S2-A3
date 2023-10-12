@@ -38,24 +38,7 @@ class Island:
     name: str
     money: float
     marines: int
-    
 
-    def value(self) -> float:
-        return (self.money / self.marines)
-            
-    def __lt__(self, other: 'Island') -> bool:
-        return self.value() < other.value()
-
-    def __le__(self, other: 'Island') -> bool:
-        return self.value() <= other.value()
-
-    def __gt__(self, other: 'Island') -> bool:
-        return self.value() > other.value()
-
-    def __ge__(self, other: 'Island') -> bool:
-        return self.value() >= other.value()
-    
-    
     @classmethod
     def random(cls):
         return Island(
