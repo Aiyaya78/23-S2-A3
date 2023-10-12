@@ -41,39 +41,20 @@ class Island:
     
 
     def value(self) -> float:
-        """
-        Calculate the loot-to-marine ratio for the island.
-        Complexity: O(1)
-        """
         return (self.money / self.marines)
             
     def __lt__(self, other: 'Island') -> bool:
-        """
-        Check if the current island's value is less than the other island's value.
-        Complexity: O(1)
-        """
         return self.value() < other.value()
 
     def __le__(self, other: 'Island') -> bool:
-        """
-        Check if the current island's value is less than or equal to the other island's value.        
-        Complexity: O(1)
-        """
         return self.value() <= other.value()
 
     def __gt__(self, other: 'Island') -> bool:
-        """
-        Check if the current island's value is greater than the other island's value.
-        Complexity: O(1)
-        """
         return self.value() > other.value()
 
     def __ge__(self, other: 'Island') -> bool:
-        """
-        Check if the current island's value is greater than or equal to the other island's value.
-        Complexity: O(1)
-        """
         return self.value() >= other.value()
+    
     
     @classmethod
     def random(cls):
